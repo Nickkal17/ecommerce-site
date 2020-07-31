@@ -16,14 +16,12 @@ app.use(expressLayouts);
 app.use(express.static('/public'));
 
 //Routes
+const indexRoutes = require('./routes/index');
 
 //Implement Routes
+app.use('/', indexRoutes);
 
 //Connect Database
-
-app.get("/", (req, res) => {
-    res.send("Hello");
-});
 
 const port = process.env.PORT || 3000;
 
