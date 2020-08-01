@@ -13,7 +13,7 @@ app.set('layout', 'layouts/layout');
 //Middleware
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: false}));
 app.use(expressLayouts);
-app.use(express.static('/public'));
+app.use(express.static(__dirname + '/public'));
 
 //Routes
 const indexRoutes = require('./routes/index');
